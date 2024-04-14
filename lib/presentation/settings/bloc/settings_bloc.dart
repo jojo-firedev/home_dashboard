@@ -1,10 +1,7 @@
 import 'package:bloc/bloc.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_secure_storage/flutter_secure_storage.dart';
 import 'package:home_dashboard/globals.dart';
 import 'package:home_dashboard/service/home_assistant_socket.dart';
-import 'package:home_dashboard/service/secure_storage.dart';
-import 'package:meta/meta.dart';
 
 part 'settings_event.dart';
 part 'settings_state.dart';
@@ -38,7 +35,7 @@ class SettingsBloc extends Bloc<SettingsEvent, SettingsState> {
 
     on<TestConnection>((event, emit) async {
       HomeAssistantAPI api = HomeAssistantAPI();
-      bool isConnected = await api.connect();
+      bool isConnected = await api.connectTest();
 
       if (isConnected) {
         if (!context.mounted) return;
@@ -63,6 +60,7 @@ class SettingsBloc extends Bloc<SettingsEvent, SettingsState> {
           ),
         );
       }
+      api.dispose();
     });
   }
 }
