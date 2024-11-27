@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:home_dashboard/globals.dart';
+import 'package:home_dashboard/presentation/components/light_card.dart';
 import 'package:home_dashboard/presentation/components/light_indicator.dart';
 import 'package:home_dashboard/service/home_assistant_socket.dart';
 
@@ -48,7 +48,17 @@ class _HomePageState extends State<HomePage> {
         ],
       ),
       body: Center(
-        child: LightIndicator(isLightOn: isLightOn),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          children: [
+            LightIndicator(isLightOn: isLightOn),
+            const SmartHomeLightCard(
+              lightName: "Wohnzimmer Licht",
+              lightColor: Colors.yellow,
+              isOn: false,
+            ),
+          ],
+        ),
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () => Navigator.of(context).pushNamed('/settings'),
