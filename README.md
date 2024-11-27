@@ -1,16 +1,5 @@
-# home_dashboard
+# Alternatives Dashboard für Home Assistant
 
-A new Flutter project.
+## Ziel
 
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Das Ziel dieses Projekts ist die Entwicklung eines alternativen Dashboards für Home Assistant unter Verwendung des **Flutter Frameworks**. Das Dashboard wird speziell für das **iPad Air (4. Generation)** optimiert und bietet eine benutzerfreundliche, maßgeschneiderte Benutzeroberfläche.
